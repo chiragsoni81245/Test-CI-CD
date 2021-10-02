@@ -5,13 +5,3 @@ files:
   - source: /
     destination: /home/ubuntu/express-app
 
-hook:
-  ApplicationStop:
-    - location: scripts/application_stop.sh
-      runas: root
-  BeforeIntall:
-    - location: scripts/before_install.sh
-      runas: root
-  ApplicationStart:
-    - location: sciprts/application_start.sh
-      runas: root
