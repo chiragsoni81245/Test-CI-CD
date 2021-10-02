@@ -7,7 +7,7 @@ sudo chmod -R 777 /home/ubuntu/express-app
 cd /home/ubuntu/express-app
 
 #install node modules
-npm install > /dev/null 2> /dev/null < /dev/null
+npm install 
 
 #start our node app in the background
-node index.js > /dev/null 2> /dev/null < /dev/null & 
+node index.js & 
