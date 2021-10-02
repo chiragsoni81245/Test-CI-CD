@@ -1,9 +1,8 @@
 #!/bin/bash
 
 #download node and npm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-. ~/.nvm/nvm.sh
-nvm install node
+sudo apt update
+sudo apt install nodejs npm
 
 #create our working directory if it doesnt exist
 DIR="/home/ubuntu/express-app"
