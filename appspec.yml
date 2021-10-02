@@ -7,14 +7,14 @@ files:
 
 hook:
   ApplicationStop:
-    - location: /home/ubuntu/express-app/scripts/application_stop.sh
+    - location: scripts/application_stop.sh
       timeout: 300
       runas: ubuntu
   BeforeIntall:
-    - location: /home/ubuntu/express-app/scripts/before_install.sh
+    - location: scripts/before_install.sh
       timeout: 300
       runas: ubuntu
   ApplicationStart:
-    - location: /home/ubuntu/express-app/sciprts/application_start.sh
+    - location: sciprts/application_start.sh
       timeout: 300
       runas: ubuntu
