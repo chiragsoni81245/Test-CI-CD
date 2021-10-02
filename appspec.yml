@@ -5,13 +5,21 @@ files:
   - source: /
     destination: /home/ubuntu/express-app
 
+permissions:
+  - object: /home/ubuntu
+    owner: ubuntu
+    group: ubuntu
+    type:
+      - directory
+      - file
+
 hook:
   ApplicationStop:
     - location: scripts/application_stop.sh
-      runas: root
+      runas: ubuntu
   BeforeIntall:
     - location: scripts/before_install.sh
-      runas: root
+      runas: ubuntu
   ApplicationStart:
     - location: sciprts/application_start.sh
-      runas: root
+      runas: ubuntu
