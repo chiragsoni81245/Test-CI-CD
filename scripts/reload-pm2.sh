@@ -6,5 +6,4 @@ sudo apt install nodejs npm -y
 cd /home/ubuntu/express-app
 pkill node
 npm i
-npm start &
-exit 0
+npm start </dev/null &>/dev/null &
