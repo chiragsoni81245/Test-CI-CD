@@ -1,10 +1,8 @@
 version: 0.0
 os: linux
-
 files:
   - source: /
     destination: /home/ubuntu/express-app
-
 permissions:
   - object: /home/ubuntu
     owner: ubuntu
@@ -12,14 +10,8 @@ permissions:
     type:
       - directory
       - file
-
-hook:
-  ApplicationStop:
-    - location: scripts/application_stop.sh
-      runas: ubuntu
-  BeforeIntall:
-    - location: scripts/before_install.sh
-      runas: ubuntu
+hooks:
   ApplicationStart:
-    - location: sciprts/application_start.sh
+    - location: scripts/reload-pm2.sh
+      timeout: 300
       runas: ubuntu
