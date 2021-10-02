@@ -1,13 +1,19 @@
 {
-  "name": "heroku_test",
+  "name": "test-ci-cd",
   "version": "1.0.0",
-  "description": "",
+  "description": "To Test CI CD",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "export NODE_ENV=dev && node index.js",
+    "test": "mocha --timeout 10000 --exit"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies":{
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.2"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
