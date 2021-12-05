@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 app.get('/', function (req, res) {
 	res.send({
-		msg: 'Hello World, its working!!', 
+		msg: 'Hello P1!', 
 		statusCode: 200
 	});
 });
